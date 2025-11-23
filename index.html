@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Expense Tracker" />
+    <title>Expense Tracker</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <header class="header">
+                <div class="logo">
+                    <img src="./images/logo.png" />
+                </div>
+                <h1 id="expense_tracker" class="title">
+                    Expense <span>Tracker</span>
+                </h1>
+            </header>
+
+            <section class="balance-summary">
+                <h3>Balance Summary</h3>
+                <div class="label">Total Balance</div>
+                <div class="total-balance" id="totalBalance">$0</div>
+
+                <div class="income-expense">
+                    <div>
+                        <div class="label">Total Income</div>
+                        <div class="income" id="totalIncome">$0</div>
+                    </div>
+                    <div>
+                        <div class="label">Total Expense</div>
+                        <div class="expense" id="totalExpense">$0</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="add-transaction">
+                <h3>Add New Transaction</h3>
+
+                <form class="form-grid" id="transactionForm">
+                    <div class="form-group">
+                        <label>Type</label>
+                        <select id="type" name="type">
+                            <option>Income</option>
+                            <option>Expense</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Amount</label>
+                        <input type="text" placeholder="$ 0.00" id="amount" name="amount" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date" placeholder="mm/dd/yyyy" id="date" name="date" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Category</label>
+                        <input type="text" placeholder="e.g. Salary, Groceries" id="category" name="category" />
+                    </div>
+
+                    <input role="button" type="submit" class="add-btn" value="Add Transaction" />
+                </form>
+            </section>
+        </aside>
+
+        <main class="main-content">
+            <h2>Transaction History</h2>
+
+            <ul class="transaction-list" id="transactionList"></ul>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">
+                © <span id="year"></span> Expense Tracker.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
