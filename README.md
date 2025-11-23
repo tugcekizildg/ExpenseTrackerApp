@@ -50,8 +50,9 @@ allTransactions = [ { type, amount, date, category }, ... ];
 
 ## Screenshots
 
-[!Desktop Screenshot](./DesktopExpenseTrackerApp.png)
-[!Desktop Screenshot with Data](./DesktopExpenseTrackerAppwithData.png)
+[!Desktop Screenshot]<img width="1920" height="947" alt="DesktopExpenseTrackerApp" src="https://github.com/user-attachments/assets/80bbe5e6-a215-4980-a6b9-01d6685f12c4" />
+[!Desktop Screenshot with Data]
+<img width="1920" height="947" alt="DesktopExpenseTrackerAppwithData" src="https://github.com/user-attachments/assets/ac2d7520-2f9b-4ac3-a661-ba01a09f65e2" />
 
 ## Known Constraints
 
